@@ -16,7 +16,6 @@ public class LoLNameExpiry {
         
         Summoner summoner = Orianna.summonerNamed("sore loser").get();
         int level = summoner.getLevel();
-        //The number of days is summoner level * month(always counted as 30)
         //If the summoner is level 30 or over, maximum number of days is 915, and if he's lower than level 5, minimum is 150
         int daysLimit = level >= 30 ? MAX : (level <= 5 ? MIN : level*30);
         System.out.println(summoner.getName() + " is level " + summoner.getLevel() + " on the " + summoner.getRegion() + " server.");
